@@ -1,0 +1,49 @@
+.ticker-tape {
+  width: 100%;
+  overflow: hidden;
+  background-color: #222831;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.ticker-content {
+  white-space: nowrap;
+  animation: ticker 45s linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-175%);
+  }
+}
+
+.ticker-item {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.ticker-item.positive {
+  color: green;
+}
+
+.ticker-item.negative {
+  color: red;
+}
+
+#currentPrice {
+  transition: color 0.5s ease;
+}
+
+.price-up {
+  color: green;
+}
+
+.price-down {
+  color: red;
+}
